@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#preprocessing" class="md-skip">
+        <a href="#preprocessing-text" class="md-skip">
           Lewati ke isi
         </a>
       
@@ -225,9 +225,113 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Preprocessing Text
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
     <a href="./" class="md-nav__link md-nav__link--active">
       Preprocessing Text
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Daftar isi">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Daftar isi
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#melakukan-preprocessing-text" class="md-nav__link">
+    Melakukan Preprocessing Text
+  </a>
+  
+    <nav class="md-nav" aria-label="Melakukan Preprocessing Text">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#library-yang-dibutuhkan" class="md-nav__link">
+    Library yang Dibutuhkan
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#menyiapkan-dokumen" class="md-nav__link">
+    Menyiapkan Dokumen
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tokenizing" class="md-nav__link">
+    Tokenizing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regular-expression" class="md-nav__link">
+    Regular Expression
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#menghilangkan-stopword" class="md-nav__link">
+    Menghilangkan Stopword
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stemming" class="md-nav__link">
+    Stemming
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matriks-tf-idf" class="md-nav__link">
+    Matriks TF-IDF
+  </a>
+  
+    <nav class="md-nav" aria-label="Matriks TF-IDF">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vector-space-model" class="md-nav__link">
+    Vector Space Model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matriks-tf-idf_1" class="md-nav__link">
+    Matriks TF-IDF
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -273,6 +377,96 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Daftar isi
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#melakukan-preprocessing-text" class="md-nav__link">
+    Melakukan Preprocessing Text
+  </a>
+  
+    <nav class="md-nav" aria-label="Melakukan Preprocessing Text">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#library-yang-dibutuhkan" class="md-nav__link">
+    Library yang Dibutuhkan
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#menyiapkan-dokumen" class="md-nav__link">
+    Menyiapkan Dokumen
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tokenizing" class="md-nav__link">
+    Tokenizing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regular-expression" class="md-nav__link">
+    Regular Expression
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#menghilangkan-stopword" class="md-nav__link">
+    Menghilangkan Stopword
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stemming" class="md-nav__link">
+    Stemming
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matriks-tf-idf" class="md-nav__link">
+    Matriks TF-IDF
+  </a>
+  
+    <nav class="md-nav" aria-label="Matriks TF-IDF">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vector-space-model" class="md-nav__link">
+    Vector Space Model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matriks-tf-idf_1" class="md-nav__link">
+    Matriks TF-IDF
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -288,7 +482,146 @@
                   </a>
                 
                 
-                <h1 id="preprocessing">Preprocessing<a class="headerlink" href="#preprocessing" title="Permanent link">&para;</a></h1>
+                <h1 id="preprocessing-text">Preprocessing Text<a class="headerlink" href="#preprocessing-text" title="Permanent link">&para;</a></h1>
+<p>Data yang baru saja di-crawl, mungkin masih belum dalam bentuk yang terstruktur (sembarang), sehingga data tersebut masih perlu dilakukan "Preprocessing Text". Preprocessing Text adalah proses yang mengubah sebuah data yang tidak beraturan menjadi data yang terstruktur. </p>
+<p>Preprocessing text tidak memiliki tahapan yang pasti, dikarenakan jenis data yang berbeda membutuhkan aturan pemrosesan yang berbeda. Namun, tahapan yang umumnya digunakan pada pemrosesan teks adalah Parsing, Tokenizer (memecah data menjadi kalimat-kalimat), Stopword Removal (menghilangkan kata-kata yang tidak memiliki informasi penting), dan Stemming (menghilangkan imbuhan pada kata).</p>
+<h2 id="melakukan-preprocessing-text"><strong>Melakukan Preprocessing Text</strong><a class="headerlink" href="#melakukan-preprocessing-text" title="Permanent link">&para;</a></h2>
+<h3 id="library-yang-dibutuhkan"><strong>Library yang Dibutuhkan</strong><a class="headerlink" href="#library-yang-dibutuhkan" title="Permanent link">&para;</a></h3>
+<p>Library yang dibutuhkan pada preprocessing text kali ini adalah:
+- Sastrawi (untuk teks Bahasa Indonesia)
+- Requests-HTML (jika menggunakan library ini untuk crawling)
+- NLTK (untuk tokenizer dan stopword removal jika teks berbahasa Inggris)
+- Scikit-learn</p>
+<h3 id="menyiapkan-dokumen"><strong>Menyiapkan Dokumen</strong><a class="headerlink" href="#menyiapkan-dokumen" title="Permanent link">&para;</a></h3>
+<p>Langkah pertama untuk melakukan pemrosesan teks adalah memanggil data dari file atau hasil crawling. </p>
+<ul>
+<li>Memanggil file eksternal</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="n">textfile</span> <span class="o">=</span> <span class="n">codecs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;filename.txt&quot;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="n">news</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">textfile</span><span class="p">:</span>
+    <span class="n">news</span> <span class="o">=</span> <span class="n">news</span> <span class="o">+</span> <span class="n">line</span>
+</code></pre></div>
+
+<ul>
+<li>Menggunakan hasil crawler yang tersedia</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">requests_html</span> <span class="kn">import</span> <span class="n">HTMLSession</span>
+
+<span class="n">session</span> <span class="o">=</span> <span class="n">HTMLSession</span><span class="p">()</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;link-of-website&#39;</span><span class="p">)</span>
+
+<span class="n">articles</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">html</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;class&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">articles</span><span class="p">:</span>
+    <span class="n">newsitem</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;sub-class&#39;</span><span class="p">,</span> <span class="n">first</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">news</span> <span class="o">=</span> <span class="n">newsitem</span><span class="o">.</span><span class="n">text</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">news</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="tokenizing"><strong>Tokenizing</strong><a class="headerlink" href="#tokenizing" title="Permanent link">&para;</a></h3>
+<p>Langkah selanjutnya adalah melakukan tokenizing. Tokenizing adalah membagi sebuah dokumen teks menjadi kalimat-kalimat dan menyimpannya ke dalam sebuah list.</p>
+<div class="codehilite"><pre><span></span><code><span class="n">doc_tokenizer</span> <span class="o">=</span> <span class="n">PunktSentenceTokenizer</span><span class="p">()</span>
+<span class="n">sentences_list</span> <span class="o">=</span> <span class="n">doc_tokenizer</span><span class="o">.</span><span class="n">tokenize</span><span class="p">(</span><span class="n">news</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Maka hasilnya akan menjadi seperti berikut ini:</p>
+<div class="codehilite"><pre><span></span><code>
+</code></pre></div>
+
+<h3 id="regular-expression"><strong>Regular Expression</strong><a class="headerlink" href="#regular-expression" title="Permanent link">&para;</a></h3>
+<p>Langkah ini untuk menghilangkan angka dan elemen Python "\n" pada teks dokumen. Baris kode di bawah ini untuk menghilangkan digit angka pada dokumen:</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">re</span>
+<span class="n">dokumenre</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">sentences_list</span><span class="p">:</span>
+    <span class="n">hasil</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\d+&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+    <span class="n">dokumenre</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">hasil</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">dokumenre</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Setelah menghilangkan angka, maka langkah selanjutnya menghilangkan elemen "\n" pada list kalimat dokumen. Baris kode di bawah ini untuk menghilangkan elemen tersebut:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">dokumen</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">dokumenre</span><span class="p">:</span>
+    <span class="n">hasil</span> <span class="o">=</span>  <span class="n">i</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span> 
+    <span class="n">dokumen</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">hasil</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">dokumen</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="menghilangkan-stopword"><strong>Menghilangkan Stopword</strong><a class="headerlink" href="#menghilangkan-stopword" title="Permanent link">&para;</a></h3>
+<p>Stopword adalah kata-kata yang diabaikan dalam pemrosesan teks, karena stopword adalah kata-kata yang tidak memberikan informasi penting. Contoh dari stopword pada Bahasa Indonesia adalah kata penghubung seperti "atau", "tapi", "dan", dan lain sebagainya. Untuk menghilangkan stopword Bahasa Indonesia, library Python yang digunakan adalah Sastrawi. Dengan mengurangi stopword, maka jumlah kata pada dokumen akan lebih sedikit (dan jumlah fitur juga lebih sedikit) untuk pemrosesan teks.</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">Sastrawi.StopWordRemover.StopWordRemoverFactory</span> <span class="kn">import</span> <span class="n">StopWordRemoverFactory</span>
+<span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">word_tokenize</span>
+<span class="n">factory</span> <span class="o">=</span> <span class="n">StopWordRemoverFactory</span><span class="p">()</span>
+<span class="n">stopword</span>  <span class="o">=</span> <span class="n">factory</span><span class="o">.</span><span class="n">create_stop_word_remover</span><span class="p">()</span>
+
+<span class="n">a</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">dokumen</span><span class="p">)</span>
+<span class="n">dokumenstop</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">a</span><span class="p">):</span>
+    <span class="n">sentence</span> <span class="o">=</span> <span class="n">stopword</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">dokumen</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">dokumenstop</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sentence</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dokumenstop</span><span class="p">)</span> 
+</code></pre></div>
+
+<h3 id="stemming"><strong>Stemming</strong><a class="headerlink" href="#stemming" title="Permanent link">&para;</a></h3>
+<p>Stemming adalah proses untuk mentransformasikan sebuah kata dengan menghilangkan imbuhan (seperti "me-", "-kan") dan menjadi sebuah kata dasar. Misalnya, kata "mengajarkan" menjadi kata dasar "ajar". Untuk teks Bahasa Indonesia, proses stemming menggunakan Sastrawi:</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">string</span> 
+<span class="kn">from</span> <span class="nn">Sastrawi.Stemmer.StemmerFactory</span> <span class="kn">import</span> <span class="n">StemmerFactory</span>
+
+<span class="n">factory</span> <span class="o">=</span> <span class="n">StemmerFactory</span><span class="p">()</span>
+<span class="n">stemmer</span> <span class="o">=</span> <span class="n">factory</span><span class="o">.</span><span class="n">create_stemmer</span><span class="p">()</span>
+<span class="n">dokumenstem</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">dokumenstop</span><span class="p">:</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="n">stemmer</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">dokumenstem</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dokumenstem</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Langkah selanjutnya adalah menghilangkan tanda baca dalam kalimat:</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">Sastrawi.StopWordRemover.StopWordRemoverFactory</span> <span class="kn">import</span> <span class="n">StopWordRemoverFactory</span>
+<span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">word_tokenize</span>
+<span class="n">factory</span> <span class="o">=</span> <span class="n">StopWordRemoverFactory</span><span class="p">()</span>
+
+<span class="n">dokumenstop</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">dokumen</span><span class="p">:</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="n">i</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">maketrans</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="n">string</span><span class="o">.</span><span class="n">punctuation</span><span class="p">))</span>
+    <span class="n">dokumenstop</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">dokumenstop</span><span class="p">)</span>
+</code></pre></div>
+
+<h2 id="matriks-tf-idf"><strong>Matriks TF-IDF</strong><a class="headerlink" href="#matriks-tf-idf" title="Permanent link">&para;</a></h2>
+<p>Term Frequency-Inverse Document Frequency (TF-IDF) adalah matriks yang mengukur seberapa penting istilah atau fitur pada suatu dokumen. Matriks TF-IDF ini digunakan untuk pemodelan topik.</p>
+<h3 id="vector-space-model"><strong>Vector Space Model</strong><a class="headerlink" href="#vector-space-model" title="Permanent link">&para;</a></h3>
+<p>Vector space model adalah</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfTransformer</span><span class="p">,</span> <span class="n">CountVectorizer</span>
+
+<span class="n">cv</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">()</span>
+<span class="n">cv_matrix</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">dokumen</span><span class="p">)</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">cv_matrix</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+
+<span class="n">bag</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">dokumenstem</span><span class="p">)</span>
+<span class="n">matrik_vsm</span> <span class="o">=</span> <span class="n">bag</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+<span class="n">matrik_vsm</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</code></pre></div>
+
+<p>Mendapatkan nama fitur:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">a</span><span class="o">=</span><span class="n">cv</span><span class="o">.</span><span class="n">get_feature_names</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">matrik_vsm</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]))</span>
+</code></pre></div>
+
+<p>Matriks VSM:</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">dfb</span> <span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">matrik_vsm</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">matrik_vsm</span><span class="p">[:,</span><span class="mi">1</span><span class="p">])</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="p">)),</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="n">a</span><span class="p">])</span>
+</code></pre></div>
+
+<h3 id="matriks-tf-idf_1"><strong>Matriks TF-IDF</strong><a class="headerlink" href="#matriks-tf-idf_1" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfTransformer</span>
+<span class="n">tfidf</span> <span class="o">=</span> <span class="n">TfidfTransformer</span><span class="p">(</span><span class="n">use_idf</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">norm</span><span class="o">=</span><span class="s1">&#39;l2&#39;</span><span class="p">,</span><span class="n">smooth_idf</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">tf</span><span class="o">=</span><span class="n">tfidf</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">cv</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">dokumenstem</span><span class="p">))</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">dfb</span> <span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">tf</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">tf</span><span class="p">[:,</span><span class="mi">1</span><span class="p">])</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="p">)),</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="n">a</span><span class="p">])</span>
+</code></pre></div>
                 
               
               

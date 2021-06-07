@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#modelling" class="md-skip">
+        <a href="#topic-modelling" class="md-skip">
           Lewati ke isi
         </a>
       
@@ -237,9 +237,93 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Topic Modelling
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
     <a href="./" class="md-nav__link md-nav__link--active">
       Topic Modelling
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Daftar isi">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Daftar isi
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#topic-modelling-dengan-lsa" class="md-nav__link">
+    Topic Modelling dengan LSA
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mendapatkan-matriks-tf-idf" class="md-nav__link">
+    Mendapatkan Matriks TF-IDF
+  </a>
+  
+    <nav class="md-nav" aria-label="Mendapatkan Matriks TF-IDF">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#import-library" class="md-nav__link">
+    Import Library
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#membaca-data" class="md-nav__link">
+    Membaca Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preprocessing" class="md-nav__link">
+    Preprocessing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matriks-tf-idf" class="md-nav__link">
+    Matriks TF-IDF
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mendapatkan-nilai-svd" class="md-nav__link">
+    Mendapatkan Nilai SVD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mendapatkan-ringkasan-topik" class="md-nav__link">
+    Mendapatkan Ringkasan Topik
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -273,6 +357,76 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Daftar isi
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#topic-modelling-dengan-lsa" class="md-nav__link">
+    Topic Modelling dengan LSA
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mendapatkan-matriks-tf-idf" class="md-nav__link">
+    Mendapatkan Matriks TF-IDF
+  </a>
+  
+    <nav class="md-nav" aria-label="Mendapatkan Matriks TF-IDF">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#import-library" class="md-nav__link">
+    Import Library
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#membaca-data" class="md-nav__link">
+    Membaca Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preprocessing" class="md-nav__link">
+    Preprocessing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matriks-tf-idf" class="md-nav__link">
+    Matriks TF-IDF
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mendapatkan-nilai-svd" class="md-nav__link">
+    Mendapatkan Nilai SVD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mendapatkan-ringkasan-topik" class="md-nav__link">
+    Mendapatkan Ringkasan Topik
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -288,7 +442,176 @@
                   </a>
                 
                 
-                <h1 id="modelling">Modelling<a class="headerlink" href="#modelling" title="Permanent link">&para;</a></h1>
+                <h1 id="topic-modelling">Topic Modelling<a class="headerlink" href="#topic-modelling" title="Permanent link">&para;</a></h1>
+<h2 id="topic-modelling-dengan-lsa"><strong>Topic Modelling dengan LSA</strong><a class="headerlink" href="#topic-modelling-dengan-lsa" title="Permanent link">&para;</a></h2>
+<p>Latent Semantic Analysis (LSA) adalah proses matematika yang berguna untuk mengklasifikasikan dan mengambil informasi menggunakan Singular Value Decomposition (SVD). LSA dapat digunakan untuk memahami hubungan antar kata agar lebih mudah dipahami.
+Menghitung LSA ini dapat dilakukan dengan data TF-IDF yang diperoleh sebelumya setelah preprocessing text.</p>
+<h2 id="mendapatkan-matriks-tf-idf"><strong>Mendapatkan Matriks TF-IDF</strong><a class="headerlink" href="#mendapatkan-matriks-tf-idf" title="Permanent link">&para;</a></h2>
+<h3 id="import-library"><strong>Import Library</strong><a class="headerlink" href="#import-library" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">codecs</span>
+<span class="kn">import</span> <span class="nn">string</span> 
+<span class="kn">import</span> <span class="nn">operator</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">sent_tokenize</span>
+<span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfVectorizer</span>
+<span class="kn">from</span> <span class="nn">Sastrawi.Stemmer.StemmerFactory</span> <span class="kn">import</span> <span class="n">StemmerFactory</span>
+<span class="kn">from</span> <span class="nn">Sastrawi.StopWordRemover.StopWordRemoverFactory</span> <span class="kn">import</span> <span class="n">StopWordRemoverFactory</span>
+<span class="kn">from</span> <span class="nn">sklearn.utils.extmath</span> <span class="kn">import</span> <span class="n">randomized_svd</span>
+</code></pre></div>
+
+<h3 id="membaca-data"><strong>Membaca Data</strong><a class="headerlink" href="#membaca-data" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="n">textfile</span> <span class="o">=</span> <span class="n">codecs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;berita.txt&quot;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="n">Article</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">textfile</span><span class="p">:</span>
+    <span class="n">Article</span> <span class="o">=</span> <span class="n">Article</span> <span class="o">+</span> <span class="n">line</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="n">Article</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="preprocessing"><strong>Preprocessing</strong><a class="headerlink" href="#preprocessing" title="Permanent link">&para;</a></h3>
+<p>Melakukan tokenisasi</p>
+<div class="codehilite"><pre><span></span><code><span class="n">dokumen</span> <span class="o">=</span> <span class="n">sent_tokenize</span><span class="p">(</span><span class="n">Article</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Menghilangkan digit angka</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">re</span> 
+<span class="n">dokumenre</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">sentences_list</span><span class="p">:</span>
+    <span class="n">hasil</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\d+&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+    <span class="n">dokumenre</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">hasil</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">dokumenre</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Menghilangkan stopword dari dokumen</p>
+<div class="codehilite"><pre><span></span><code><span class="n">factory</span> <span class="o">=</span> <span class="n">StopWordRemoverFactory</span><span class="p">()</span>
+<span class="n">stopword</span>  <span class="o">=</span> <span class="n">factory</span><span class="o">.</span><span class="n">create_stop_word_remover</span><span class="p">()</span>
+<span class="n">a</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">dokumen</span><span class="p">)</span>
+
+<span class="n">dokumenstop</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">a</span><span class="p">):</span>
+    <span class="n">sentence</span> <span class="o">=</span> <span class="n">stopword</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">dokumen</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">dokumenstop</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sentence</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dokumenstop</span><span class="p">)</span>  
+</code></pre></div>
+
+<p>Menghilangkan tanda baca pada dokumen</p>
+<div class="codehilite"><pre><span></span><code><span class="n">dokumenstop</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">dokumen</span><span class="p">:</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="n">i</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">maketrans</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="n">string</span><span class="o">.</span><span class="n">punctuation</span><span class="p">))</span>
+    <span class="n">dokumenstop</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Stemming untuk menghilangkan imbuhan pada kata</p>
+<div class="codehilite"><pre><span></span><code><span class="n">factory</span> <span class="o">=</span> <span class="n">StemmerFactory</span><span class="p">()</span>
+<span class="n">stemmer</span> <span class="o">=</span> <span class="n">factory</span><span class="o">.</span><span class="n">create_stemmer</span><span class="p">()</span>
+<span class="n">dokumenstem</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">dokumenstop</span><span class="p">:</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="n">stemmer</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">dokumenstem</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dokumenstem</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="matriks-tf-idf"><strong>Matriks TF-IDF</strong><a class="headerlink" href="#matriks-tf-idf" title="Permanent link">&para;</a></h3>
+<p>Setelah preprocessing text, maka langkah selanjutnya adalah mendapatkan nilai matriks TF-IDF.</p>
+<div class="codehilite"><pre><span></span><code><span class="n">vectorizer</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">(</span><span class="n">stop_words</span><span class="o">=</span><span class="n">stopwords</span><span class="p">,</span> <span class="n">use_idf</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ngram_range</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">dokumen</span><span class="p">)</span>
+<span class="n">X_T</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="mendapatkan-nilai-svd"><strong>Mendapatkan Nilai SVD</strong><a class="headerlink" href="#mendapatkan-nilai-svd" title="Permanent link">&para;</a></h3>
+<p>Singular Value Decomposition (SVD) adalah salah satu teknik reduksi dimensi atau fitur yang membantu untuk memperkecil nilai kompleksitas pada pemrosesan teks. SVD memiliki tiga matriks, diantaranya:
+- Matriks ortogonal U
+- Matriks diagonal S
+- Transpose dari matriks ortogonal V
+Rumus dari SVD adalah:</p>
+<div>
+<div class="MathJax_Preview">
+A = U \Sigma V^T
+</div>
+<script type="math/tex; mode=display">
+A = U \Sigma V^T
+</script>
+</div>
+<div class="codehilite"><pre><span></span><code><span class="n">U</span><span class="p">,</span> <span class="n">Sigma</span><span class="p">,</span> <span class="n">VT</span> <span class="o">=</span> <span class="n">randomized_svd</span><span class="p">(</span><span class="n">X_T</span><span class="p">,</span> <span class="n">n_components</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">n_iter</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="mendapatkan-ringkasan-topik"><strong>Mendapatkan Ringkasan Topik</strong><a class="headerlink" href="#mendapatkan-ringkasan-topik" title="Permanent link">&para;</a></h3>
+<p>Setelah mendapatkan nilai dari SVD, maka selanjutnya adalah mendapat ringkasan topik dari dokumen. Berikut adalah cara mendapatkan ringkasan dari nilai SVD, dimana ringkasan topik ini diurutkan berdasarkan nilai SVD.</p>
+<p>Variabel k adalah berapa jumlah kalimat yang dijadikan sebagai ringkasan dari dokumen.</p>
+<div class="codehilite"><pre><span></span><code><span class="n">k</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">temp_k</span> <span class="o">=</span> <span class="n">k</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span> 
+<span class="n">index</span> <span class="o">=</span> <span class="mi">0</span> 
+<span class="n">output</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">index_list</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">if</span> <span class="n">k</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">:</span> 
+    <span class="k">while</span> <span class="n">k</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> 
+            <span class="n">dic</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">VT</span><span class="p">[</span><span class="n">i</span><span class="p">])):</span>
+                <span class="n">dic</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">VT</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
+            <span class="n">dic_sort</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">dic</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="n">operator</span><span class="o">.</span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+            <span class="n">index1</span> <span class="o">=</span> <span class="n">dic_sort</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">index2</span> <span class="o">=</span> <span class="n">dic_sort</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">index3</span> <span class="o">=</span> <span class="n">dic_sort</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+            <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="n">index1</span><span class="p">,</span> <span class="n">index2</span><span class="p">,</span> <span class="n">index3</span><span class="p">]</span>
+            <span class="nb">list</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">:</span>
+                <span class="n">output</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dokumen</span><span class="p">[</span><span class="n">t</span><span class="p">])</span>
+                <span class="n">index_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+            <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">-</span> <span class="mi">3</span>
+        <span class="k">if</span> <span class="n">k</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="k">elif</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">temp_k</span> <span class="o">!=</span> <span class="mi">4</span><span class="p">:</span>
+            <span class="n">dic</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">VT</span><span class="p">[</span><span class="n">i</span><span class="p">])):</span>
+                <span class="n">dic</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">VT</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
+            <span class="n">dic_sort</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">dic</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="n">operator</span><span class="o">.</span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+            <span class="n">temp_list</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">VT</span><span class="p">[</span><span class="n">i</span><span class="p">]),</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">dic_sort</span><span class="p">[</span><span class="n">p</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">index_list</span><span class="p">:</span>
+                        <span class="n">temp_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dic_sort</span><span class="p">[</span><span class="n">p</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+                        <span class="n">index_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dic_sort</span><span class="p">[</span><span class="n">p</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+            <span class="nb">list</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">temp_list</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">:</span>
+                <span class="n">output</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dokumen</span><span class="p">[</span><span class="n">t</span><span class="p">])</span>
+            <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">-</span> <span class="mi">2</span>
+        <span class="k">if</span> <span class="n">k</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="k">elif</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="nb">max</span> <span class="o">=</span> <span class="o">-</span><span class="mi">9999999999</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">VT</span><span class="p">[</span><span class="n">i</span><span class="p">])):</span>
+                <span class="k">if</span> <span class="n">VT</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="nb">max</span> <span class="ow">and</span> <span class="n">j</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">index_list</span><span class="p">:</span>
+                    <span class="n">index</span> <span class="o">=</span> <span class="n">j</span>
+                <span class="nb">max</span> <span class="o">=</span> <span class="n">VT</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
+                <span class="n">index_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+            <span class="n">output</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dokumen</span><span class="p">[</span><span class="n">index</span><span class="p">])</span>
+            <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="n">temp_k</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
+    <span class="n">dic</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">VT</span><span class="p">[</span><span class="mi">0</span><span class="p">])):</span>
+        <span class="n">dic</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">VT</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
+    <span class="n">dic_sort</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">dic</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="n">operator</span><span class="o">.</span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+
+    <span class="n">index1</span> <span class="o">=</span> <span class="n">dic_sort</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">index2</span> <span class="o">=</span> <span class="n">dic_sort</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+    <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="n">index1</span><span class="p">,</span> <span class="n">index2</span><span class="p">]</span>
+    <span class="nb">list</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">k</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">output</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dokumen</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
+    <span class="k">if</span> <span class="n">k</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">output</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dokumen</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
+        <span class="n">output</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dokumen</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="mi">1</span><span class="p">]])</span>
+
+<span class="n">summarized_text</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hasil rangkuman: </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">summarized_text</span><span class="p">)</span>
+</code></pre></div>
                 
               
               
