@@ -591,7 +591,7 @@
 <h2 id="matriks-tf-idf"><strong>Matriks TF-IDF</strong><a class="headerlink" href="#matriks-tf-idf" title="Permanent link">&para;</a></h2>
 <p>Term Frequency-Inverse Document Frequency (TF-IDF) adalah matriks yang mengukur seberapa penting istilah atau fitur pada suatu dokumen. Matriks TF-IDF ini digunakan untuk pemodelan topik.</p>
 <h3 id="vector-space-model"><strong>Vector Space Model</strong><a class="headerlink" href="#vector-space-model" title="Permanent link">&para;</a></h3>
-<p>Vector space model adalah</p>
+<p>Vector space model adalah model aljabar untuk merepresentasikan dokumen teks sebagai vector.</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfTransformer</span><span class="p">,</span> <span class="n">CountVectorizer</span>
 
 <span class="n">cv</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">()</span>
@@ -608,18 +608,21 @@
 <span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">matrik_vsm</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]))</span>
 </code></pre></div>
 
-<p>Matriks VSM:</p>
+<p>Berikut ini adalah cara untuk menampilkan matriks VSM:</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
 <span class="n">dfb</span> <span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">matrik_vsm</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">matrik_vsm</span><span class="p">[:,</span><span class="mi">1</span><span class="p">])</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="p">)),</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="n">a</span><span class="p">])</span>
 </code></pre></div>
 
 <h3 id="matriks-tf-idf_1"><strong>Matriks TF-IDF</strong><a class="headerlink" href="#matriks-tf-idf_1" title="Permanent link">&para;</a></h3>
+<p>Matriks TF-IDF (Term Frecuency-Inverse Document Frequency) adalah ukuran statistika yang mengevaluasi seberapa relevan sebuah kata ke sebuah dokumen di dalam kumpulan dokumen-dokumen. TF-IDF didapat dengan cara mengalikan jumlah berapa kali sebuah kata muncul dalam dokumen dengan frekuensi dokumen terbalik dari kata di satu set dokumen.
+Berikut adalah cara mendapatkan TF-IDF dengan Python:</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfTransformer</span>
 <span class="n">tfidf</span> <span class="o">=</span> <span class="n">TfidfTransformer</span><span class="p">(</span><span class="n">use_idf</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">norm</span><span class="o">=</span><span class="s1">&#39;l2&#39;</span><span class="p">,</span><span class="n">smooth_idf</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">tf</span><span class="o">=</span><span class="n">tfidf</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">cv</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">dokumenstem</span><span class="p">))</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
 </code></pre></div>
 
+<p>Berikut untuk mendapatkan representasi dari matriks TF-IDF:</p>
 <div class="codehilite"><pre><span></span><code><span class="n">dfb</span> <span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">tf</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">tf</span><span class="p">[:,</span><span class="mi">1</span><span class="p">])</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="p">)),</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="n">a</span><span class="p">])</span>
 </code></pre></div>
                 
