@@ -16,7 +16,7 @@
     
     
       
-        <title>LSA Evaluation - Web Mining</title>
+        <title>Summarization Evaluation - Web Mining</title>
       
     
     
@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#evaluasi" class="md-skip">
+        <a href="#evaluasi-ringkasan-otomatis" class="md-skip">
           Lewati ke isi
         </a>
       
@@ -93,7 +93,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              LSA Evaluation
+              Summarization Evaluation
             
           </span>
         </div>
@@ -249,9 +249,154 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Summarization Evaluation
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
     <a href="./" class="md-nav__link md-nav__link--active">
-      LSA Evaluation
+      Summarization Evaluation
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Daftar isi">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Daftar isi
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#n-gram" class="md-nav__link">
+    N-Gram
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jenis-jenis-metode-dari-rouge" class="md-nav__link">
+    Jenis-Jenis Metode dari ROUGE
+  </a>
+  
+    <nav class="md-nav" aria-label="Jenis-Jenis Metode dari ROUGE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rouge-n" class="md-nav__link">
+    ROUGE-N
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rouge-l" class="md-nav__link">
+    ROUGE-L
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rouge-s" class="md-nav__link">
+    ROUGE-S
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rouge-w" class="md-nav__link">
+    ROUGE-W
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rouge-su" class="md-nav__link">
+    ROUGE-SU
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recall-precision-dan-f-measure" class="md-nav__link">
+    Recall, Precision, dan F-measure
+  </a>
+  
+    <nav class="md-nav" aria-label="Recall, Precision, dan F-measure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recall" class="md-nav__link">
+    Recall
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#precission" class="md-nav__link">
+    Precission
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#f-measure" class="md-nav__link">
+    F-Measure
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementasi-rouge" class="md-nav__link">
+    Implementasi ROUGE
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementasi ROUGE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#memasang-library-python" class="md-nav__link">
+    Memasang Library Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#impementasi-1" class="md-nav__link">
+    Impementasi 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementasi-2" class="md-nav__link">
+    Implementasi 2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -273,6 +418,137 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Daftar isi
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#n-gram" class="md-nav__link">
+    N-Gram
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jenis-jenis-metode-dari-rouge" class="md-nav__link">
+    Jenis-Jenis Metode dari ROUGE
+  </a>
+  
+    <nav class="md-nav" aria-label="Jenis-Jenis Metode dari ROUGE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rouge-n" class="md-nav__link">
+    ROUGE-N
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rouge-l" class="md-nav__link">
+    ROUGE-L
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rouge-s" class="md-nav__link">
+    ROUGE-S
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rouge-w" class="md-nav__link">
+    ROUGE-W
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rouge-su" class="md-nav__link">
+    ROUGE-SU
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recall-precision-dan-f-measure" class="md-nav__link">
+    Recall, Precision, dan F-measure
+  </a>
+  
+    <nav class="md-nav" aria-label="Recall, Precision, dan F-measure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recall" class="md-nav__link">
+    Recall
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#precission" class="md-nav__link">
+    Precission
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#f-measure" class="md-nav__link">
+    F-Measure
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementasi-rouge" class="md-nav__link">
+    Implementasi ROUGE
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementasi ROUGE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#memasang-library-python" class="md-nav__link">
+    Memasang Library Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#impementasi-1" class="md-nav__link">
+    Impementasi 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementasi-2" class="md-nav__link">
+    Implementasi 2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -288,7 +564,231 @@
                   </a>
                 
                 
-                <h1 id="evaluasi">Evaluasi<a class="headerlink" href="#evaluasi" title="Permanent link">&para;</a></h1>
+                <h1 id="evaluasi-ringkasan-otomatis">Evaluasi Ringkasan Otomatis<a class="headerlink" href="#evaluasi-ringkasan-otomatis" title="Permanent link">&para;</a></h1>
+<p>Recall-Oriented Understudy for Gisting Evaluation (ROUGE) adalah perhitungan evaluasi ringkasan dari teks atau dokumen. ROUGE bekerja dengan membandingkan ringkasan yang dibuat secara otomatis atau terjemahan dengan ringkasan rujukan.
+Berikut ini adalah contoh dari ringkasan referensi dan ringkasan mesin:</p>
+<ul>
+<li>Ringkasan Referensi</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>The cat was under the bed
+</code></pre></div>
+
+<ul>
+<li>Ringkasan Mesin</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>The cat was found under the bed
+</code></pre></div>
+
+<h2 id="n-gram"><strong>N-Gram</strong><a class="headerlink" href="#n-gram" title="Permanent link">&para;</a></h2>
+<p>N-gram adalah pengelompokan token/kata. Misalnya, unigram (1-gram) akan terdiri dari satu kata dan bigram (2-gram) terdiri dari dua kata yang berurutan. Berikut ini contoh dari n-gram:</p>
+<ul>
+<li>Unigram (1-gram)</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>[&quot;the&quot;, &quot;cat&quot;, &quot;was&quot;, &quot;under&quot;, &quot;the&quot;, &quot;bed&quot;]
+</code></pre></div>
+
+<ul>
+<li>Bigram (2-gram)</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>[&quot;the cat&quot;, &quot;cat was&quot;, &quot;was under&quot;, &quot;under the&quot;, &quot;the bed&quot;]
+</code></pre></div>
+
+<ul>
+<li>Trigram (3-gram)</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>[&quot;the cat was&quot;, &quot;cat was under&quot;, &quot;was under the&quot;, &quot;under the bed&quot;]
+</code></pre></div>
+
+<h2 id="jenis-jenis-metode-dari-rouge"><strong>Jenis-Jenis Metode dari ROUGE</strong><a class="headerlink" href="#jenis-jenis-metode-dari-rouge" title="Permanent link">&para;</a></h2>
+<p>Ada bermacam-macam dari metode ROUGE, diantaranya:</p>
+<h3 id="rouge-n"><strong>ROUGE-N</strong><a class="headerlink" href="#rouge-n" title="Permanent link">&para;</a></h3>
+<p>ROUGE-N menghitung jumlah "n-gram" yang cocok antara ringkasan yang dibuat mesin dengan ringkasan rujukan. </p>
+<h3 id="rouge-l"><strong>ROUGE-L</strong><a class="headerlink" href="#rouge-l" title="Permanent link">&para;</a></h3>
+<p>Menghitung urutan terpanjang kata yang cocok menggunakan Longest Common Subsequence (LCS). Kelebihan menggunakan LCS adalah tidak memerlukan kecocokan yang berturut-turut tapi kecocokan pada urutan yang merefleksikan urutan kata pada tingkatan kalimat. Karena itu secara otomatis memasukkan n-gram umum terpanjang di dalam urutan, maka tidak perlu mendefinisikan terlebih dahulu untuk panjang dari n-gram.</p>
+<h3 id="rouge-s"><strong>ROUGE-S</strong><a class="headerlink" href="#rouge-s" title="Permanent link">&para;</a></h3>
+<p>ROUGE-S adalah segala pasangan kata yang berurutan di dalam sebuah kalimat, memungkinkan untuk celah sembarangan. ROUGE-S juga dapat disebut sebagai Skip-gram Coocurrence. Misalnya, skip-bigram menghitung jumlah pasangan kata yang overlap yang dapat memiliki dua celah maksimum antar kata. Contohnya, untuk kalimat "cat in the hat" maka skip-gram-nya adalah "cat in, cat the, cat hat, in the, in hat, the hat".</p>
+<h3 id="rouge-w"><strong>ROUGE-W</strong><a class="headerlink" href="#rouge-w" title="Permanent link">&para;</a></h3>
+<h3 id="rouge-su"><strong>ROUGE-SU</strong><a class="headerlink" href="#rouge-su" title="Permanent link">&para;</a></h3>
+<p>Karena ROUGE-S hanya memperhatikan bigram, maka dikembangkanlah metode ROGUE-SU yang juga memperhatikan unigram. Jika sebuah kalimat tidak memiliki kata yang overlap, maka tidak ada bobot yang dihasilkan pada kalimat.</p>
+<h2 id="recall-precision-dan-f-measure"><strong>Recall, Precision, dan F-measure</strong><a class="headerlink" href="#recall-precision-dan-f-measure" title="Permanent link">&para;</a></h2>
+<h3 id="recall"><strong>Recall</strong><a class="headerlink" href="#recall" title="Permanent link">&para;</a></h3>
+<p>Recall menghitung jumlah n-grams yang overlap ditemukan pada ringkasan mesin dan rujukan dan dibagi dengan jumlah kata pada ringkasan rujukan.
+Rumus dari Recall adalah:
+$$
+R = \frac{\text{Banyaknya kata yang overlap}}{\text{Banyaknya kata pada ringkasan rujukan}}
+$$</p>
+<p>Recall bagus untuk memastikan ringkasan yang dibuat mendapatkan semua informasi yang terkandung dalam rujukan, tapi recall tidak terlalu bagus untuk memastikan ringkasan yang dibuat tidak mendorong jumlah kata yang sangat besar ke dalam skor recall.</p>
+<p>Contoh dari penghitungan Recall:</p>
+<ul>
+<li>Ringkasan mesin: "The cat was found under the bed"</li>
+<li>Ringkasan rujukan: "The cat was under the bed"</li>
+<li>Kata yang overlap: "The", "cat", "was", "under", "the", "bed"</li>
+</ul>
+<p>Maka nilai recall-nya adalah:
+$$
+Recall = \frac{\text{Banyaknya kata yang overlap}}{\text{Banyaknya kata pada ringkasan rujukan}}
+$$</p>
+<div>
+<div class="MathJax_Preview">
+Recall = \frac{6}{6} = 100\text{%}
+</div>
+<script type="math/tex; mode=display">
+Recall = \frac{6}{6} = 100\text{%}
+</script>
+</div>
+<h3 id="precission"><strong>Precission</strong><a class="headerlink" href="#precission" title="Permanent link">&para;</a></h3>
+<p>Untuk menghindari kelemahan pada recall, maka precision digunakan. Dimana dihitung dengan cara yang hampir sama, tapi daripada dibagi jumlah n-grams rujukan, jumlah kata yang overlap dibagi dengan jumlah n-gram pada mesin.
+Rumus dari Precission adalah:
+$$
+P = \frac{\text{Banyaknya kata yang overlap}}{\text{Banyaknya kata pada ringkasan mesin}}
+$$</p>
+<p>Contoh dari penghitungan Precision:</p>
+<ul>
+<li>Ringkasan mesin: "The cat was found under the bed"</li>
+<li>Ringkasan rujukan: "The cat was under the bed"</li>
+<li>Kata yang overlap: "The", "cat", "was", "under", "the", "bed"</li>
+</ul>
+<p>Maka nilai precision-nya adalah:
+$$
+Precission = \frac{\text{Banyaknya kata yang overlap}}{\text{Banyaknya kata pada ringkasan mesin}}
+$$</p>
+<div>
+<div class="MathJax_Preview">
+Precission = \frac{6}{7} = 85.7\text{%} = 86\text{%}
+</div>
+<script type="math/tex; mode=display">
+Precission = \frac{6}{7} = 85.7\text{%} = 86\text{%}
+</script>
+</div>
+<h3 id="f-measure"><strong>F-Measure</strong><a class="headerlink" href="#f-measure" title="Permanent link">&para;</a></h3>
+<p>F-measure memberikan informasi lengkap berkaitan dengan recall dan precision.
+Rumus dari F-mesure adalah:
+$$
+F-measure = \frac{(1 + \beta^2) R \times P}{R + \beta^2 \times P}
+$$
+Jika <span><span class="MathJax_Preview">\beta = 1</span><script type="math/tex">\beta = 1</script></span>, maka:
+$$
+F-measure = \frac{ 2 \times R \times P}{R + P}
+$$</p>
+<h2 id="implementasi-rouge"><strong>Implementasi ROUGE</strong><a class="headerlink" href="#implementasi-rouge" title="Permanent link">&para;</a></h2>
+<h3 id="memasang-library-python"><strong>Memasang Library Python</strong><a class="headerlink" href="#memasang-library-python" title="Permanent link">&para;</a></h3>
+<p>Ada dua cara untuk memasang library untuk menghitung ROUGE pada Python:
+- Memasang library dari GitHub:</p>
+<div class="codehilite"><pre><span></span><code>pip install git+https://github.com/tagucci/pythonrouge.git
+</code></pre></div>
+
+<ul>
+<li>Memasang library menggunakan PyPI</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>pip install easy-rouge
+</code></pre></div>
+
+<h3 id="impementasi-1"><strong>Impementasi 1</strong><a class="headerlink" href="#impementasi-1" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">rouge.rouge</span> <span class="kn">import</span> <span class="n">rouge_n_sentence_level</span>
+
+<span class="n">summary_sentence</span> <span class="o">=</span> <span class="s1">&#39;the capital of China is Beijing&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="n">reference_sentence</span> <span class="o">=</span> <span class="s1">&#39;Beijing is the capital of China&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+
+<span class="c1"># Calculate ROUGE-2.</span>
+<span class="n">recall</span><span class="p">,</span> <span class="n">precision</span><span class="p">,</span> <span class="n">rouge</span> <span class="o">=</span> <span class="n">rouge_n_sentence_level</span><span class="p">(</span><span class="n">summary_sentence</span><span class="p">,</span>
+<span class="n">reference_sentence</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ROUGE-2-R&#39;</span><span class="p">,</span> <span class="n">recall</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ROUGE-2-P&#39;</span><span class="p">,</span> <span class="n">precision</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ROUGE-2-F&#39;</span><span class="p">,</span> <span class="n">rouge</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Maka hasilnya adalah:</p>
+<div class="codehilite"><pre><span></span><code>ROUGE-2-R 0.6
+ROUGE-2-P 0.6
+ROUGE-2-F 0.6
+</code></pre></div>
+
+<h3 id="implementasi-2"><strong>Implementasi 2</strong><a class="headerlink" href="#implementasi-2" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">rouge</span> <span class="kn">import</span> <span class="n">rouge_n_sentence_level</span>
+<span class="kn">from</span> <span class="nn">rouge</span> <span class="kn">import</span> <span class="n">rouge_l_sentence_level</span>
+<span class="kn">from</span> <span class="nn">rouge</span> <span class="kn">import</span> <span class="n">rouge_w_sentence_level</span>
+<span class="kn">from</span> <span class="nn">rouge</span> <span class="kn">import</span> <span class="n">rouge_n_summary_level</span>
+<span class="kn">from</span> <span class="nn">rouge</span> <span class="kn">import</span> <span class="n">rouge_l_summary_level</span>
+<span class="kn">from</span> <span class="nn">rouge</span> <span class="kn">import</span> <span class="n">rouge_w_summary_level</span>
+
+<span class="n">reference_sentence</span> <span class="o">=</span> <span class="s1">&#39;the police killed the gunman&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="n">summary_sentence</span> <span class="o">=</span> <span class="s1">&#39;the gunman police killed&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Sentence level:&#39;</span><span class="p">)</span>
+<span class="n">score</span> <span class="o">=</span> <span class="n">rouge_n_sentence_level</span><span class="p">(</span><span class="n">summary_sentence</span><span class="p">,</span> <span class="n">reference_sentence</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ROUGE-1: </span><span class="si">%f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">score</span><span class="o">.</span><span class="n">f1_measure</span><span class="p">)</span>
+
+<span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">rouge_2</span> <span class="o">=</span> <span class="n">rouge_n_sentence_level</span><span class="p">(</span><span class="n">summary_sentence</span><span class="p">,</span> <span class="n">reference_sentence</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ROUGE-2: </span><span class="si">%f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">rouge_2</span><span class="p">)</span>
+
+<span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">rouge_l</span> <span class="o">=</span> <span class="n">rouge_l_sentence_level</span><span class="p">(</span><span class="n">summary_sentence</span><span class="p">,</span> <span class="n">reference_sentence</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ROUGE-L: </span><span class="si">%f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">rouge_l</span><span class="p">)</span>
+
+<span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">rouge_w</span> <span class="o">=</span> <span class="n">rouge_w_sentence_level</span><span class="p">(</span><span class="n">summary_sentence</span><span class="p">,</span> <span class="n">reference_sentence</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ROUGE-W: </span><span class="si">%f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">rouge_w</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Maka hasil output-nya adalah:</p>
+<div class="codehilite"><pre><span></span><code>Sentence level:
+ROUGE-1: 0.888889
+ROUGE-2: 0.571429
+ROUGE-L: 0.666667
+ROUGE-W: 0.550527
+</code></pre></div>
+
+<p>Contoh lainnya adalah:</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">rouge</span> <span class="kn">import</span> <span class="n">rouge_n_sentence_level</span>
+<span class="kn">from</span> <span class="nn">rouge</span> <span class="kn">import</span> <span class="n">rouge_l_sentence_level</span>
+<span class="kn">from</span> <span class="nn">rouge</span> <span class="kn">import</span> <span class="n">rouge_n_summary_level</span>
+<span class="kn">from</span> <span class="nn">rouge</span> <span class="kn">import</span> <span class="n">rouge_l_summary_level</span>
+<span class="kn">from</span> <span class="nn">rouge</span> <span class="kn">import</span> <span class="n">rouge_w_sentence_level</span>
+<span class="kn">from</span> <span class="nn">rouge</span> <span class="kn">import</span> <span class="n">rouge_w_summary_level</span>
+
+<span class="n">reference_sentences</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;The gunman was shot dead by the police before more people got hurt&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">(),</span>
+<span class="s1">&#39;This tragedy causes lives of five , the gunman included&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">(),</span>
+<span class="s1">&#39;The motivation of the gunman remains unclear&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">(),</span>
+<span class="p">]</span>
+<span class="n">summary_sentences</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;Police killed the gunman . no more people got</span>
+<span class="n">hurt</span><span class="s1">&#39;.split(),</span>
+<span class="s1">&#39;Five people got killed including the gunman&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">(),</span>
+<span class="s1">&#39;It is unclear why the gunman killed people&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">(),</span>
+<span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Summary level:&#39;</span><span class="p">)</span>
+<span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">rouge_1</span> <span class="o">=</span> <span class="n">rouge_n_summary_level</span><span class="p">(</span><span class="n">summary_sentences</span><span class="p">,</span> <span class="n">reference_sentences</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ROUGE-1: </span><span class="si">%f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">rouge_1</span><span class="p">)</span>
+
+<span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">rouge_2</span> <span class="o">=</span> <span class="n">rouge_n_summary_level</span><span class="p">(</span><span class="n">summary_sentences</span><span class="p">,</span> <span class="n">reference_sentences</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ROUGE-2: </span><span class="si">%f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">rouge_2</span><span class="p">)</span>
+
+<span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">rouge_l</span> <span class="o">=</span> <span class="n">rouge_l_summary_level</span><span class="p">(</span><span class="n">summary_sentences</span><span class="p">,</span> <span class="n">reference_sentences</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ROUGE-L: </span><span class="si">%f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">rouge_l</span><span class="p">)</span>
+
+<span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">rouge_w</span> <span class="o">=</span> <span class="n">rouge_w_summary_level</span><span class="p">(</span><span class="n">summary_sentences</span><span class="p">,</span> <span class="n">reference_sentences</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ROUGE-W: </span><span class="si">%f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">rouge_w</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Outputnya adalah:</p>
+<div class="codehilite"><pre><span></span><code>Summary level:
+ROUGE-1: 0.400000
+ROUGE-2: 0.188679
+ROUGE-L: 0.327273
+ROUGE-W: 0.200430
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">recall</span><span class="p">,</span> <span class="n">precision</span><span class="p">,</span> <span class="n">rouge_1</span> <span class="o">=</span> <span class="n">rouge_n_summary_level</span><span class="p">(</span><span class="n">summary_sentences</span><span class="p">,</span>
+<span class="n">reference_sentences</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ROUGE-2-R&#39;</span><span class="p">,</span> <span class="n">recall</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ROUGE-2-P&#39;</span><span class="p">,</span> <span class="n">precision</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ROUGE-2-F&#39;</span><span class="p">,</span> <span class="n">rouge</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Outputnya adalah:</p>
+<div class="codehilite"><pre><span></span><code>ROUGE-2-R 0.36666666666666664
+ROUGE-2-P 0.44
+ROUGE-2-F 0.
+</code></pre></div>
                 
               
               
